@@ -10,6 +10,7 @@ btnPromise.onclick = runPromise;
 let btnAsync = document.querySelector('#btnAsync');
 btnAsync.onclick = runAsync;
 
+
 function runCallback() {
   resetTitle();
   playVideo();
@@ -30,14 +31,23 @@ function runPromise() {
   resetTitle();
   playVideo();
 
-  sleep(1000).then(() => {
-    pauseVideo();
-    displayTitle();
-  })
-    .then(sleep.bind(null, 500))
+  sleep(1000)
+    .then((param) => {
+      console.log(param);
+      pauseVideo();
+      displayTitle();
+      return "world";
+    })
+    .then((param) => {
+      console.log(param);
+      sleep(500);
+    })
     .then(highlightTitle)
     .then(sleep.bind(null, 2000))
     .then(resetTitle)
+    .catch(err => {
+      console.log(err);
+    })
 }
 
 async function runAsync() {
@@ -87,3 +97,22 @@ function log(message) {
   l.textContent = `[${new Date().toISOString().slice(11, -5)}] ${message}`;
   logger.prepend(l);
 }
+
+const chkpro = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('hello');
+    }, 5000);
+  });
+};
+
+
+
+
+// const emptyPromise = (wait) => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve('hello');
+//     }, wait);
+//   });
+// };
