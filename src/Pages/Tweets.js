@@ -32,7 +32,6 @@ const Tweets = () => {
   //   }
   //   return res;
   // };
-
   // const 중복제거배열 = 중복제거함수(contents);
 
   const options = 중복제거배열.map((content) => {
