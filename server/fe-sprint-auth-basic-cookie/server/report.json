@@ -1,0 +1,242 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 16,
+    "passes": 16,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-14T09:34:18.963Z",
+    "end": "2022-07-14T09:34:19.003Z",
+    "duration": 40
+  },
+  "tests": [
+    {
+      "title": "🚩 HTTPS 프로토콜을 사용하는 서버여야 합니다.",
+      "fullTitle": "Auth - Server Protocol - HTTP over Secure 🚩 HTTPS 프로토콜을 사용하는 서버여야 합니다.",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 db에 존재하는 유저가 아니라면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "fullTitle": "Auth - Server POST /login 🚩 db에 존재하는 유저가 아니라면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그인에 성공했다면 /userinfo로 리다이렉트 되어야 합니다.",
+      "fullTitle": "Auth - Server POST /login 🚩 로그인에 성공했다면 /userinfo로 리다이렉트 되어야 합니다.",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그인 상태를 일시적으로 유지하는 요청이라면 Session Cookie를 보내야합니다.",
+      "fullTitle": "Auth - Server POST /login 🚩 로그인 상태를 일시적으로 유지하는 요청이라면 Session Cookie를 보내야합니다.",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그인 상태를 유지하는 요청이라면 Session Cookie가 아닌 Persistent Cookie를 보내야합니다.",
+      "fullTitle": "Auth - Server POST /login 🚩 로그인 상태를 유지하는 요청이라면 Session Cookie가 아닌 Persistent Cookie를 보내야합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 Domain 옵션은 `localhost`로 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 Domain 옵션은 `localhost`로 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 Path 옵션은 `/`로 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 Path 옵션은 `/`로 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 HttpOnly 옵션이 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 HttpOnly 옵션이 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 Secure 옵션이 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 Secure 옵션이 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 SameSite 옵션은 `none`으로 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 SameSite 옵션은 `none`으로 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 쿠키에 cookieId가 없다면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "fullTitle": "GET /userinfo 🚩 쿠키에 cookieId가 없다면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 쿠키에 저장된 cookieId가 유저정보와 일치하지 않는다면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "fullTitle": "GET /userinfo 🚩 쿠키에 저장된 cookieId가 유저정보와 일치하지 않는다면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 쿠키에 저장된 cookieId가 유저정보와 일치한다면, 유저정보가 응답에 포함되어야 합니다.",
+      "fullTitle": "GET /userinfo 🚩 쿠키에 저장된 cookieId가 유저정보와 일치한다면, 유저정보가 응답에 포함되어야 합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 응답에 포함된 유저정보에 비밀번호가 담겨있지 않아야 합니다.",
+      "fullTitle": "GET /userinfo 🚩 응답에 포함된 유저정보에 비밀번호가 담겨있지 않아야 합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그아웃 요청 시 205 상태코드로 응답해야 합니다.",
+      "fullTitle": "POST /logout 🚩 로그아웃 요청 시 205 상태코드로 응답해야 합니다.",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그아웃 요청 시 쿠키를 초기화해야 합니다.",
+      "fullTitle": "POST /logout 🚩 로그아웃 요청 시 쿠키를 초기화해야 합니다.",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "🚩 HTTPS 프로토콜을 사용하는 서버여야 합니다.",
+      "fullTitle": "Auth - Server Protocol - HTTP over Secure 🚩 HTTPS 프로토콜을 사용하는 서버여야 합니다.",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 db에 존재하는 유저가 아니라면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "fullTitle": "Auth - Server POST /login 🚩 db에 존재하는 유저가 아니라면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그인에 성공했다면 /userinfo로 리다이렉트 되어야 합니다.",
+      "fullTitle": "Auth - Server POST /login 🚩 로그인에 성공했다면 /userinfo로 리다이렉트 되어야 합니다.",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그인 상태를 일시적으로 유지하는 요청이라면 Session Cookie를 보내야합니다.",
+      "fullTitle": "Auth - Server POST /login 🚩 로그인 상태를 일시적으로 유지하는 요청이라면 Session Cookie를 보내야합니다.",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그인 상태를 유지하는 요청이라면 Session Cookie가 아닌 Persistent Cookie를 보내야합니다.",
+      "fullTitle": "Auth - Server POST /login 🚩 로그인 상태를 유지하는 요청이라면 Session Cookie가 아닌 Persistent Cookie를 보내야합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 Domain 옵션은 `localhost`로 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 Domain 옵션은 `localhost`로 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 Path 옵션은 `/`로 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 Path 옵션은 `/`로 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 HttpOnly 옵션이 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 HttpOnly 옵션이 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 Secure 옵션이 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 Secure 옵션이 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "쿠키 옵션중 SameSite 옵션은 `none`으로 설정되어야 합니다",
+      "fullTitle": "Auth - Server POST /login Cookie Option 쿠키 옵션중 SameSite 옵션은 `none`으로 설정되어야 합니다",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 쿠키에 cookieId가 없다면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "fullTitle": "GET /userinfo 🚩 쿠키에 cookieId가 없다면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 쿠키에 저장된 cookieId가 유저정보와 일치하지 않는다면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "fullTitle": "GET /userinfo 🚩 쿠키에 저장된 cookieId가 유저정보와 일치하지 않는다면, 상태 코드 401와 함께 Not Authorized라는 메세지가 응답에 포함되어야 합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 쿠키에 저장된 cookieId가 유저정보와 일치한다면, 유저정보가 응답에 포함되어야 합니다.",
+      "fullTitle": "GET /userinfo 🚩 쿠키에 저장된 cookieId가 유저정보와 일치한다면, 유저정보가 응답에 포함되어야 합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 응답에 포함된 유저정보에 비밀번호가 담겨있지 않아야 합니다.",
+      "fullTitle": "GET /userinfo 🚩 응답에 포함된 유저정보에 비밀번호가 담겨있지 않아야 합니다.",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그아웃 요청 시 205 상태코드로 응답해야 합니다.",
+      "fullTitle": "POST /logout 🚩 로그아웃 요청 시 205 상태코드로 응답해야 합니다.",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "🚩 로그아웃 요청 시 쿠키를 초기화해야 합니다.",
+      "fullTitle": "POST /logout 🚩 로그아웃 요청 시 쿠키를 초기화해야 합니다.",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
