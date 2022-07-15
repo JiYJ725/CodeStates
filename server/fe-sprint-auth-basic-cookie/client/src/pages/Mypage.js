@@ -15,6 +15,7 @@ export default function Mypage({ userInfo, setIsLogin, setUserInfo }) {
       })
       .catch((err) => {
         // 로그아웃에 실패했다면 그에 대한 에러 핸들링을 구현하세요.
+        console.log(err.response.data);
       });
   };
 

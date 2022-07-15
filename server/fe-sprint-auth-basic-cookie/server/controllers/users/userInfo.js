@@ -5,6 +5,7 @@ module.exports = (req, res) => {
   const userInfo = {
     ...USER_DATA.filter((user) => user.id === cookieId)[0],
   };
+  console.log(cookieId);
   /*
    * TODO: 쿠키 검증 여부에 따라 유저 정보를 전달하는 로직을 구현하세요.
    *

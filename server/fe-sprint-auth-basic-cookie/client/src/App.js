@@ -29,11 +29,6 @@ function App() {
       });
   };
 
-  const loginHandler = (userInfo) => {
-    setIsLogin(true);
-    setUserInfo(userInfo);
-  };
-
   useEffect(() => {
     // 컴포넌트 생성 시 아래 함수가 실행됩니다.
     authHandler();
@@ -60,8 +55,8 @@ function App() {
                   /*
                 TODO: App의 상태를 변경할 수 있도록 props를 전달하세요. 
                 */
-                setIsLogin={setIsLogin}
-                setUserInfo={setUserInfo}
+                  setIsLogin={setIsLogin}
+                  setUserInfo={setUserInfo}
                 />
               )
             }
