@@ -22,20 +22,21 @@ module.exports = async (req, res) => {
 
   if (verifyAccessToken) {
     const userInfo = createUserInfo(verifyAccessToken.id);
-
     delete userInfo.password;
-    res.send(userInfo);
-  } else if (verifyRefreshToken) {
+    return res.send(userInfo);
+  }
+
+  if (verifyRefreshToken) {
     const userInfo = createUserInfo(verifyRefreshToken.id);
 
     cookieConfig.maxAge = 1000 * 60 * 30;
-    const ReGenerateToken = generateToken(userInfo, false);
+    const ReGenerateToken = generateToken(userInfo);
     res.cookie("access_jwt", (await ReGenerateToken).accessToken, cookieConfig);
     delete userInfo.password;
-    res.send(userInfo);
-  } else {
-    res.status(401).send("Not Authorized");
+    return res.send(userInfo);
   }
+
+  return res.status(401).send("Not Authorized");
 
   /*
    * TODO: 토큰 검증 여부에 따라 유저 정보를 전달하는 로직을 구현하세요.

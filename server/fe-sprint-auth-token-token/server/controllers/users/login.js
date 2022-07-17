@@ -22,18 +22,21 @@ module.exports = async (req, res) => {
   };
 
   if (!userInfo.id) {
-    res.status(401).send("Not Authorized");
-  } else if (checkedKeepLogin) {
-    const checkedToken = generateToken(userInfo, true);
-    cookieConfig.maxAge = 1000 * 60 * 30;
-    res.cookie("access_jwt", (await checkedToken).accessToken, cookieConfig);
-    res.cookie("refresh_jwt", (await checkedToken).refreshToken, cookieConfig);
-    res.redirect("/userinfo");
-  } else {
-    const uncheckedToken = generateToken(userInfo, false);
-    res.cookie("access_jwt", (await uncheckedToken).accessToken, cookieConfig);
-    res.redirect("/userinfo");
+    return res.status(401).send("Not Authorized");
   }
+
+  const { accessToken, refreshToken } = await generateToken(
+    userInfo,
+    checkedKeepLogin
+  );
+
+  if (refreshToken) {
+    cookieConfig.maxAge = new Date(Date.now() + 1000 * 60 * 1440 * 7);
+    res.cookie("refresh_jwt", refreshToken, cookieConfig);
+  }
+
+  res.cookie("access_jwt", accessToken, cookieConfig);
+  return res.redirect("/userinfo");
   /*
    * TODO: 로그인 로직을 구현하세요.
    *
